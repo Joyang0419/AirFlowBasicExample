@@ -1,0 +1,68 @@
+[2022-07-07 13:13:48,838] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.create_table scheduled__2022-07-07T00:06:00+00:00 [queued]>
+[2022-07-07 13:13:48,853] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.create_table scheduled__2022-07-07T00:06:00+00:00 [queued]>
+[2022-07-07 13:13:48,853] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:13:48,853] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-07-07 13:13:48,853] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:13:48,869] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_table> on 2022-07-07 00:06:00+00:00
+[2022-07-07 13:13:48,875] {standard_task_runner.py:52} INFO - Started process 46798 to run task
+[2022-07-07 13:13:48,878] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'sql_test_dag', 'create_table', 'scheduled__2022-07-07T00:06:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/good_dag.py', '--cfg-path', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmpiuo84nqt', '--error-file', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmp_ss385od']
+[2022-07-07 13:13:48,879] {standard_task_runner.py:80} INFO - Job 60: Subtask create_table
+[2022-07-07 13:13:48,949] {task_command.py:370} INFO - Running <TaskInstance: sql_test_dag.create_table scheduled__2022-07-07T00:06:00+00:00 [running]> on host 1.0.0.127.in-addr.arpa
+[2022-07-07 13:13:49,025] {logging_mixin.py:115} WARNING - /Users/***ang0419/opt/anaconda3/envs/AirFlowBasicExample/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py:518 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-07-07 13:13:49,040] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=Joy
+AIRFLOW_CTX_DAG_ID=sql_test_dag
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-07T00:06:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-07T00:06:00+00:00
+[2022-07-07 13:13:49,048] {log.py:117} INFO - SHOW VARIABLES LIKE 'sql_mode'
+[2022-07-07 13:13:49,048] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:13:49,051] {log.py:117} INFO - SHOW VARIABLES LIKE 'lower_case_table_names'
+[2022-07-07 13:13:49,051] {log.py:117} INFO - [generated in 0.00039s] {}
+[2022-07-07 13:13:49,056] {log.py:117} INFO - SELECT DATABASE()
+[2022-07-07 13:13:49,056] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:13:49,061] {log.py:117} INFO - BEGIN (implicit)
+[2022-07-07 13:13:49,062] {log.py:117} INFO - SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+[2022-07-07 13:13:49,062] {log.py:117} INFO - [generated in 0.00028s] {'table_schema': 'airflow', 'table_name': 'test'}
+[2022-07-07 13:13:49,065] {log.py:117} INFO - COMMIT
+[2022-07-07 13:13:49,067] {python.py:173} INFO - Done. Returned value was: None
+[2022-07-07 13:13:49,081] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=sql_test_dag, task_id=create_table, execution_date=20220707T000600, start_date=20220707T051348, end_date=20220707T051349
+[2022-07-07 13:13:49,137] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-07-07 13:16:43,043] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.create_table scheduled__2022-07-07T00:06:00+00:00 [queued]>
+[2022-07-07 13:16:43,054] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.create_table scheduled__2022-07-07T00:06:00+00:00 [queued]>
+[2022-07-07 13:16:43,054] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:16:43,054] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-07-07 13:16:43,054] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:16:43,071] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_table> on 2022-07-07 00:06:00+00:00
+[2022-07-07 13:16:43,078] {standard_task_runner.py:52} INFO - Started process 47511 to run task
+[2022-07-07 13:16:43,082] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'sql_test_dag', 'create_table', 'scheduled__2022-07-07T00:06:00+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/good_dag.py', '--cfg-path', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmp2tffe95_', '--error-file', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmp99qz418u']
+[2022-07-07 13:16:43,085] {standard_task_runner.py:80} INFO - Job 71: Subtask create_table
+[2022-07-07 13:16:43,183] {task_command.py:370} INFO - Running <TaskInstance: sql_test_dag.create_table scheduled__2022-07-07T00:06:00+00:00 [running]> on host yangjunyis-macbook-pro.local
+[2022-07-07 13:16:43,278] {logging_mixin.py:115} WARNING - /Users/***ang0419/opt/anaconda3/envs/AirFlowBasicExample/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py:518 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-07-07 13:16:43,298] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=Joy
+AIRFLOW_CTX_DAG_ID=sql_test_dag
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-07T00:06:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-07T00:06:00+00:00
+[2022-07-07 13:16:43,306] {log.py:117} INFO - SHOW VARIABLES LIKE 'sql_mode'
+[2022-07-07 13:16:43,307] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:16:43,310] {log.py:117} INFO - SHOW VARIABLES LIKE 'lower_case_table_names'
+[2022-07-07 13:16:43,310] {log.py:117} INFO - [generated in 0.00040s] {}
+[2022-07-07 13:16:43,315] {log.py:117} INFO - SELECT DATABASE()
+[2022-07-07 13:16:43,315] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:16:43,321] {log.py:117} INFO - BEGIN (implicit)
+[2022-07-07 13:16:43,321] {log.py:117} INFO - SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+[2022-07-07 13:16:43,321] {log.py:117} INFO - [generated in 0.00031s] {'table_schema': 'airflow', 'table_name': 'test'}
+[2022-07-07 13:16:43,324] {log.py:117} INFO - COMMIT
+[2022-07-07 13:16:43,327] {python.py:173} INFO - Done. Returned value was: None
+[2022-07-07 13:16:43,339] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=sql_test_dag, task_id=create_table, execution_date=20220707T000600, start_date=20220707T051643, end_date=20220707T051643
+[2022-07-07 13:16:43,397] {local_task_job.py:156} INFO - Task exited with return code 0

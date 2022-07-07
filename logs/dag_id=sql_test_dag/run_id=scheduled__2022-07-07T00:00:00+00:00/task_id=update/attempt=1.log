@@ -1,0 +1,35 @@
+[2022-07-07 13:13:35,348] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.update scheduled__2022-07-07T00:00:00+00:00 [queued]>
+[2022-07-07 13:13:35,357] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.update scheduled__2022-07-07T00:00:00+00:00 [queued]>
+[2022-07-07 13:13:35,357] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:13:35,357] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-07-07 13:13:35,357] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:13:35,376] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): update> on 2022-07-07 00:00:00+00:00
+[2022-07-07 13:13:35,380] {standard_task_runner.py:52} INFO - Started process 46723 to run task
+[2022-07-07 13:13:35,384] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'sql_test_dag', 'update', 'scheduled__2022-07-07T00:00:00+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/good_dag.py', '--cfg-path', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmp_jf73u6g', '--error-file', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmpk005ucea']
+[2022-07-07 13:13:35,385] {standard_task_runner.py:80} INFO - Job 49: Subtask update
+[2022-07-07 13:13:35,445] {task_command.py:370} INFO - Running <TaskInstance: sql_test_dag.update scheduled__2022-07-07T00:00:00+00:00 [running]> on host 1.0.0.127.in-addr.arpa
+[2022-07-07 13:13:35,532] {logging_mixin.py:115} WARNING - /Users/***ang0419/opt/anaconda3/envs/AirFlowBasicExample/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py:518 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-07-07 13:13:35,547] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=Joy
+AIRFLOW_CTX_DAG_ID=sql_test_dag
+AIRFLOW_CTX_TASK_ID=update
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-07T00:00:00+00:00
+[2022-07-07 13:13:35,552] {log.py:117} INFO - SHOW VARIABLES LIKE 'sql_mode'
+[2022-07-07 13:13:35,552] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:13:35,555] {log.py:117} INFO - SHOW VARIABLES LIKE 'lower_case_table_names'
+[2022-07-07 13:13:35,555] {log.py:117} INFO - [generated in 0.00035s] {}
+[2022-07-07 13:13:35,559] {log.py:117} INFO - SELECT DATABASE()
+[2022-07-07 13:13:35,559] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:13:35,564] {log.py:117} INFO - BEGIN (implicit)
+[2022-07-07 13:13:35,565] {log.py:117} INFO - UPDATE test SET enable=%(enable)s WHERE test.id = %(id_1)s
+[2022-07-07 13:13:35,565] {log.py:117} INFO - [generated in 0.00029s] {'enable': 1, 'id_1': 9}
+[2022-07-07 13:13:35,567] {log.py:117} INFO - COMMIT
+[2022-07-07 13:13:35,573] {python.py:173} INFO - Done. Returned value was: None
+[2022-07-07 13:13:35,585] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=sql_test_dag, task_id=update, execution_date=20220707T000000, start_date=20220707T051335, end_date=20220707T051335
+[2022-07-07 13:13:35,610] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-07-07 13:13:35,639] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,34 @@
+[2022-07-07 13:18:05,885] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.insert_row scheduled__2022-07-07T00:27:00+00:00 [queued]>
+[2022-07-07 13:18:05,894] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sql_test_dag.insert_row scheduled__2022-07-07T00:27:00+00:00 [queued]>
+[2022-07-07 13:18:05,894] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:18:05,895] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-07-07 13:18:05,895] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-07 13:18:05,910] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): insert_row> on 2022-07-07 00:27:00+00:00
+[2022-07-07 13:18:05,913] {standard_task_runner.py:52} INFO - Started process 47991 to run task
+[2022-07-07 13:18:05,917] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'sql_test_dag', 'insert_row', 'scheduled__2022-07-07T00:27:00+00:00', '--job-id', '138', '--raw', '--subdir', 'DAGS_FOLDER/good_dag.py', '--cfg-path', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmpp9gtt4rf', '--error-file', '/var/folders/6v/f6z_nn9s2y3_bpv10g3cntbc0000gn/T/tmpqg_pwfkp']
+[2022-07-07 13:18:05,918] {standard_task_runner.py:80} INFO - Job 138: Subtask insert_row
+[2022-07-07 13:18:05,987] {task_command.py:370} INFO - Running <TaskInstance: sql_test_dag.insert_row scheduled__2022-07-07T00:27:00+00:00 [running]> on host 1.0.0.127.in-addr.arpa
+[2022-07-07 13:18:06,051] {logging_mixin.py:115} WARNING - /Users/***ang0419/opt/anaconda3/envs/AirFlowBasicExample/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py:518 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-07-07 13:18:06,064] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=Joy
+AIRFLOW_CTX_DAG_ID=sql_test_dag
+AIRFLOW_CTX_TASK_ID=insert_row
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-07T00:27:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-07T00:27:00+00:00
+[2022-07-07 13:18:06,069] {log.py:117} INFO - SHOW VARIABLES LIKE 'sql_mode'
+[2022-07-07 13:18:06,069] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:18:06,072] {log.py:117} INFO - SHOW VARIABLES LIKE 'lower_case_table_names'
+[2022-07-07 13:18:06,072] {log.py:117} INFO - [generated in 0.00037s] {}
+[2022-07-07 13:18:06,075] {log.py:117} INFO - SELECT DATABASE()
+[2022-07-07 13:18:06,075] {log.py:117} INFO - [raw sql] {}
+[2022-07-07 13:18:06,078] {log.py:117} INFO - BEGIN (implicit)
+[2022-07-07 13:18:06,078] {log.py:117} INFO - INSERT INTO test (enable) VALUES (%(enable)s)
+[2022-07-07 13:18:06,079] {log.py:117} INFO - [generated in 0.00030s] {'enable': 0}
+[2022-07-07 13:18:06,080] {log.py:117} INFO - COMMIT
+[2022-07-07 13:18:06,083] {python.py:173} INFO - Done. Returned value was: 38
+[2022-07-07 13:18:06,110] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=sql_test_dag, task_id=insert_row, execution_date=20220707T002700, start_date=20220707T051805, end_date=20220707T051806
+[2022-07-07 13:18:06,139] {local_task_job.py:156} INFO - Task exited with return code 0
